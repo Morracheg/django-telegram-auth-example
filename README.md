@@ -8,3 +8,6 @@
 * В `templates/login.html` добавить свой скрипт виджета, полученный после настройки
 
 Статья: [Авторизация через Telegram в Django и Python](https://khashtamov.com/ru/telegram-auth-django/)
+
+
+@MRG_testbot

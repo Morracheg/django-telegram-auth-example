@@ -20,6 +20,7 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_telegram_auth_example',
 ]
 
 LOCAL_APPS = [
@@ -112,7 +113,8 @@ STATIC_URL = '/static/'
 SOCIAL_AUTH_TELEGRAM_BOT_TOKEN = env.str('SOCIAL_AUTH_TELEGRAM_BOT_TOKEN')
 
 # Default profile url
-LOGIN_REDIRECT_URL = reverse_lazy('profile')
+# LOGIN_REDIRECT_URL = reverse_lazy('profile')
+LOGIN_REDIRECT_URL = reverse_lazy('download')
 
 # Supported Auth Backends
 AUTHENTICATION_BACKENDS = (

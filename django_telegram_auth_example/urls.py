@@ -17,10 +17,15 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 
+from django_telegram_auth_example import views
 
 urlpatterns = [
+    # url('', include('social_django.urls', namespace='social'))
     path('admin/', admin.site.urls),
     path('auth/', include('social_django.urls', namespace='social')),
     path('profile/', TemplateView.as_view(template_name='profile.html'), name='profile'),
     path('', TemplateView.as_view(template_name='login.html')),
+    path('accounts/login/', TemplateView.as_view(template_name='login.html')),
+    path('download/', views.download_file),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
